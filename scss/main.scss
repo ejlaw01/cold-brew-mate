@@ -1,0 +1,21 @@
+@import "libraries/bourbon/bourbon.scss";
+@import "libraries/neat/neat.scss";
+
+@import "modules/_variables.scss";
+@import "modules/_mixins.scss";
+
+@import "partials/_reset.scss";
+@import "partials/_typography.scss";
+
+body {
+  color: $text-color;
+  font-size: $base-font-size;
+  font-family: $base-font-family;
+  font-weight: $base-font-weight;
+  line-height: 1.6;
+}
+
+@import "partials/_hero.scss";
+@import "partials/_nav.scss";
+@import "partials/_section.scss";
+@import "partials/_footer.scss";
