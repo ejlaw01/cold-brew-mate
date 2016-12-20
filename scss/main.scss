@@ -8,6 +8,7 @@
 @import "partials/_typography.scss";
 
 body {
+  box-sizing: border-box;
   color: $text-dark;
   font-size: $base-font-size;
   font-family: $base-font-family;

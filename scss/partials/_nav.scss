@@ -1,0 +1,11 @@
+.nav {
+  height: 10vh;
+  position: relative;
+  background: $off-white;
+  ul {
+    @include display(flex);
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+  }
+}

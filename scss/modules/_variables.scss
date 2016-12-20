@@ -1,6 +1,13 @@
-$text-light: white;
-$text-dark: black;
+$text-light: #F7F4EF;
+$text-dark: inverse($text-light);
 
 $base-font-size: 1em;
-$base-font-family: sans-serif;
+$base-font-family: 'Open Sans', sans-serif;
 $base-font-weight: 400;
+$header-font-family: 'Open Sans', sans-serif;
+
+$off-white: #F7F4EF;
+$primary: #D6E681;
+$secondary: #cc621c;
+$highlight: #FF9554;
+$green-filter: $primary;
