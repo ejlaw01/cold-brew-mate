@@ -1,9 +1,67 @@
+.main {
+
+}
+
+.section-wrapper {
+  width: 100%;
+}
+
 .section {
-  height: 100vh;
+  position: relative;
+  height: auto;
+  min-height: 70vh;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1em;
+  background-color: inherit;
+  .section-text {
+    margin: 1em;
+    text-align: center;
+  }
+}
+
+#our-mates {
+  .flavors {
+    @include display(flex);
+    @include justify-content(space-around);
+    @include align-items(center);
+    @media screen and (max-width: 550px) {
+      flex-direction: column;
+    }
+    .product-flavor {
+      margin: 1em;
+      img {
+        width: 150px;
+      }
+    }
+  }
 }
 
 #why-mate {
   background-color: $secondary;
+  position: relative;
+  .section {
+    // position: absolute;
+    // @include vertical-center;
+    @include display(flex);
+    @include justify-content(space-between);
+    @include align-items(baseline);
+    .reason {
+      position: relative;
+      min-width: 25%;
+      margin: 1em;
+
+      h3 {
+        margin-top: 65px;
+        text-align: center;
+      }
+      img {
+        position: absolute;
+        @include horizontal-center;
+        height: 50px;
+      }
+    }
+  }
 }
 
 #impact {

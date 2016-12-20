@@ -1,11 +1,20 @@
 .nav {
   height: 10vh;
   position: relative;
-  background: $off-white;
   ul {
+    position: relative;
     @include display(flex);
     justify-content: space-around;
     align-items: center;
     height: 100%;
+    li {
+      color: $text-dark;
+    }
+  }
+  &:before {
+    content: '';
+    @include position(absolute,  0 0 0 0);
+    background: $off-white;
+    opacity: .6;
   }
 }
