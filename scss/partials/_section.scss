@@ -40,17 +40,19 @@
 #why-mate {
   background-color: $secondary;
   position: relative;
+  color: $text-light;
+  z-index: 1;
   .section {
-    // position: absolute;
-    // @include vertical-center;
     @include display(flex);
     @include justify-content(space-between);
     @include align-items(baseline);
+    @media screen and (max-width: 650px) {
+      @include flex-direction(column);
+    }
     .reason {
       position: relative;
       min-width: 25%;
       margin: 1em;
-
       h3 {
         margin-top: 65px;
         text-align: center;
@@ -61,6 +63,53 @@
         height: 50px;
       }
     }
+  }
+}
+
+#process {
+  position: relative;
+  height: 1000px;
+  width: 218px;
+  margin: 0 auto;
+  padding: 0;
+  background: whitesmoke;
+  h2 {
+    position: relative;
+    z-index: 2;
+  }
+  .ingredients {
+    @include position(absolute, 0 0 auto 0);
+    min-height: 150px;
+    width: 100%;
+    background: white;
+    z-index: 1;
+    .faucet svg {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+  }
+  .pour {
+    position: fixed;
+    top: 110px;
+    @include horizontal-center;
+    overflow: hidden;
+    .flow {
+      &#water {
+        float: right;
+      }
+      &.spacer {
+        width: 100px;
+      }
+      &#yerba {
+        float: left;
+      }
+    }
+  }
+  .brew {
+    position: absolute;
+    @include horizontal-center;
+    top: 400px;
   }
 }
 

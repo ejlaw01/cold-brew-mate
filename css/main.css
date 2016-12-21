@@ -52,6 +52,7 @@ table {
   border-spacing: 0; }
 
 h2 {
+  text-align: center;
   font-size: 2em;
   font-weight: lighter;
   color: inverse(#F7F4EF); }
@@ -176,7 +177,9 @@ body {
 
 #why-mate {
   background-color: #cc621c;
-  position: relative; }
+  position: relative;
+  color: #F7F4EF;
+  z-index: 1; }
   #why-mate .section {
     display: -webkit-box;
     display: -moz-box;
@@ -203,6 +206,18 @@ body {
     -o-align-items: baseline;
     align-items: baseline;
     -ms-flex-align: baseline; }
+    @media screen and (max-width: 650px) {
+      #why-mate .section {
+        -webkit-box-orient: vertical;
+        -moz-box-orient: vertical;
+        box-orient: vertical;
+        -webkit-box-direction: normal;
+        -moz-box-direction: normal;
+        box-direction: normal;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-direction: column; } }
     #why-mate .section .reason {
       position: relative;
       min-width: 25%;
@@ -215,6 +230,48 @@ body {
         left: 50%;
         transform: translate(-50%, 0);
         height: 50px; }
+
+#process {
+  position: relative;
+  height: 1000px;
+  width: 218px;
+  margin: 0 auto;
+  padding: 0;
+  background: whitesmoke; }
+  #process h2 {
+    position: relative;
+    z-index: 2; }
+  #process .ingredients {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: auto;
+    left: 0;
+    min-height: 150px;
+    width: 100%;
+    background: white;
+    z-index: 1; }
+    #process .ingredients .faucet svg {
+      position: absolute;
+      right: 0;
+      bottom: 0; }
+  #process .pour {
+    position: fixed;
+    top: 110px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    overflow: hidden; }
+    #process .pour .flow#water {
+      float: right; }
+    #process .pour .flow.spacer {
+      width: 100px; }
+    #process .pour .flow#yerba {
+      float: left; }
+  #process .brew {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: 400px; }
 
 #impact {
   background-color: #D6E681; }
