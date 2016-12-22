@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700|Open+Sans:300,400,600" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
     <title>Cold Brew Mate</title>
   </head>
   <body>
@@ -22,6 +24,10 @@
         <li>Impact</li>
         <li>Contact</li>
       </ul>
+      <div class="mobile-nav">
+        <h3>Ethan's Yerba Mate</h3>
+        <img src="img/menu-burger.png" alt="toggle menu">
+      </div>
     </div>
     <div class="main">
       <div class="section-wrapper" id="our-mates">
@@ -44,22 +50,23 @@
       </div>
       <div class="section-wrapper" id="why-mate">
         <div class="section">
-          <div class="reason">
-            <img class="icon" src="img/people.svg" alt="happy person">
-            <h3>Feel good</h3>
-            <p>The effect of mate <i>(MAH-tay)</i> is at once envigorating and calming.  </p>
-            <h5>expand</h5>
-          </div>
-          <div class="reason">
-            <img class="icon" src="img/cross.svg" alt="medical cross">
-            <h3>Be healthy</h3>
-            <p>With more than 27 vitamins and minerals, 13 amino acids, and more antioxidants than even green tea, yerba mate is among the most nutrient-rich plants on the planet. It is metabolism-boosting, anti-inflammatory and immunotherapeutic. The Guarani people of Paraguay, who first used yerba mate thousands of years ago, called it the Drink of the Gods and it formed the basis of their medicine.</p>
-            <h5>expand</h5>
-          </div>
-          <div class="reason">
-            <img class="icon" src="img/nature.svg" alt="leaf">
-            <h3>Live sustainably</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <h2>Why drink mate?</h2>
+          <div class="reason-wrapper">
+            <div class="reason">
+              <img class="icon" src="img/people.svg" alt="happy person">
+              <h3>Feel good</h3>
+              <p>The effect of mate <i>(MAH-tay)</i> is at once envigorating and calming.  Imagine the energy of coffee, the relaxation of tea, and the euphoria of chocolate all in one.  It calms the stomach and curbs hunger while increasing mental clarity.  You really have to it to believe it.</p>
+            </div>
+            <div class="reason">
+              <img class="icon" src="img/cross.svg" alt="medical cross">
+              <h3>Be healthy</h3>
+              <p>With more than 27 vitamins and minerals, 13 amino acids, and more antioxidants than even green tea, yerba mate is among the most nutrient-rich plants on the planet. It is metabolism-boosting, anti-inflammatory and immunotherapeutic. The Guarani people of Paraguay, who first used yerba mate thousands of years ago, called it the Drink of the Gods and used it as the basis of their medicine.</p>
+            </div>
+            <div class="reason">
+              <img class="icon" src="img/nature.svg" alt="leaf">
+              <h3>Live sustainably</h3>
+              <p>Our organic yerba mate is all shade-grown.  Not only is shade-grown mate the most flavorful and nutrient-dense, but its agriculture helps redevelop deforested areas.  We source from Fair Trade farmers in Brazil and Paraguay, and our packaging is post-consumer and biodegradable.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -76,28 +83,25 @@
               </svg>
             </div>
           </div>
-          <div class="pour">
-            <div class="flow" id="water">
-              <svg width="17px" height="330px" viewBox="682 492 17 358" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
-                <desc>Created with Sketch.</desc>
-                <defs>
-                  <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
-                    <stop stop-color="#D9F1FF" offset="0%"></stop>
-                    <stop stop-color="#90CEFF" offset="100%"></stop>
-                  </linearGradient>
-                </defs>
-                <rect stroke="none" fill="url(#linearGradient-1)" fill-rule="evenodd" x="682" y="492" width="17" height="358"></rect>
-              </svg>
-            </div>
-            <div class="flow spacer">
-            </div>
-            <div class="flow" id="yerba">
-
+          <div class="pour-wrapper">
+            <div class="pour">
+              <div id="water">
+                <svg width="17px" height="340px" viewBox="682 492 17 358" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+                  <desc>Created with Sketch.</desc>
+                  <defs>
+                    <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+                      <stop stop-color="#D9F1FF" offset="0%"></stop>
+                      <stop stop-color="#90CEFF" offset="100%"></stop>
+                    </linearGradient>
+                  </defs>
+                  <rect stroke="none" fill="url(#linearGradient-1)" fill-rule="evenodd" x="682" y="492" width="17" height="358"></rect>
+                </svg>
+              </div>
             </div>
           </div>
           <div class="brew">
-            <div class="bucket-face">
+            <div class="bucket">
               <svg width="212px" height="251px" viewBox="524 611 212 251" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                   <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
                   <desc>Created with Sketch.</desc>
@@ -118,7 +122,45 @@
                       <rect id="Rectangle-5" fill="#FFFFFF" x="185" y="31" width="5" height="181"></rect>
                   </g>
               </svg>
+              <svg width="185px" height="244px" viewBox="538 591 185 244" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+                  <desc>Created with Sketch.</desc>
+                  <defs></defs>
+                  <path d="M538,591 L722,594 L722,813 C722,813 722,834 630,834 C538,834 538,813 538,813 L538,591 Z" id="Rectangle-3" stroke="none" fill="#181818" fill-rule="evenodd" transform="translate(630.000000, 712.500000) scale(1, -1) translate(-630.000000, -712.500000) "></path>
+              </svg>
             </div>
+            <div class="tap">
+              <svg width="41px" height="7px" viewBox="598 814 41 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+                  <desc>Created with Sketch.</desc>
+                  <defs></defs>
+                  <rect id="bucket-back" stroke="none" fill="#892222" fill-rule="evenodd" x="598" y="814" width="41" height="7"></rect>
+              </svg>
+              <svg width="15px" height="26px" viewBox="624 821 15 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+                  <desc>Created with Sketch.</desc>
+                  <defs></defs>
+                  <rect id="Rectangle-4" stroke="none" fill="#808080" fill-rule="evenodd" x="624" y="821" width="15" height="26"></rect>
+              </svg>
+            </div>
+            <div class="clock-face">
+            </div>
+          </div>
+          <div class="fill">
+            <svg id="bottle" width="32px" height="62px" viewBox="616 1011 32 62" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+                <desc>Created with Sketch.</desc>
+                <defs></defs>
+                <g id="glass-bottle" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(616.000000, 1011.000000)">
+                    <path d="M22,7.12903226 L31,17 L0,17 L9,7.12903226 L9,0 L22,0 L22,7.12903226 Z M0,17 L31,17 L31,62 L0,62 L0,17 Z" id="Combined-Shape" fill="#997A5D"></path>
+                </g>
+            </svg>
+            <svg id="mate" width="11px" height="120px" viewBox="626 847 11 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+                <desc>Created with Sketch.</desc>
+                <defs></defs>
+                <rect id="Rectangle-6" stroke="none" fill="#7CD078" fill-rule="evenodd" x="626" y="847" width="11" height="120"></rect>
+            </svg>
           </div>
         </div>
       </div>
@@ -128,6 +170,11 @@
           <h2>Impact</h2>
         </div>
       </div>
+
+      <div class="section-wrapper" id="contact">
+
+      </div>
+
     </div>
     <div class="footer">
 

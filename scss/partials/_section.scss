@@ -14,6 +14,10 @@
   margin: 0 auto;
   padding: 1em;
   background-color: inherit;
+  z-index: 0;
+  @media screen and (min-width: 750px) {
+    padding: 2em;
+  }
   .section-text {
     margin: 1em;
     text-align: center;
@@ -21,6 +25,10 @@
 }
 
 #our-mates {
+  position: relative;
+  top: 10vh;
+  background: white;
+  margin-bottom: 10vh;
   .flavors {
     @include display(flex);
     @include justify-content(space-around);
@@ -42,7 +50,7 @@
   position: relative;
   color: $text-light;
   z-index: 1;
-  .section {
+  .reason-wrapper {
     @include display(flex);
     @include justify-content(space-between);
     @include align-items(baseline);
@@ -52,7 +60,8 @@
     .reason {
       position: relative;
       min-width: 25%;
-      margin: 1em;
+      margin: 2em 1em;
+      padding-bottom: 1em;
       h3 {
         margin-top: 65px;
         text-align: center;
@@ -68,18 +77,21 @@
 
 #process {
   position: relative;
-  height: 1000px;
+  height: auto;
   width: 218px;
   margin: 0 auto;
   padding: 0;
-  background: whitesmoke;
+  background: white;
+  z-index: -2;
   h2 {
     position: relative;
+    padding-top: 1.5em;
+    background: white;
     z-index: 2;
   }
   .ingredients {
-    @include position(absolute, 0 0 auto 0);
-    min-height: 150px;
+    position: relative;
+    min-height: 100px;
     width: 100%;
     background: white;
     z-index: 1;
@@ -89,27 +101,87 @@
       bottom: 0;
     }
   }
-  .pour {
-    position: fixed;
-    top: 110px;
-    @include horizontal-center;
+  .pour-wrapper {
+    position: relative;
+    height: 250px;
+    width: 100%;
     overflow: hidden;
-    .flow {
-      &#water {
+    .pour {
+      position: fixed;
+      top: 240px;
+      @include horizontal-center;
+      overflow: hidden;
+      z-index: -3;
+      #water {
+        display: none;
         float: right;
+        margin-left: 83px;
       }
-      &.spacer {
-        width: 100px;
-      }
-      &#yerba {
-        float: left;
+      .flow {
+        display: block !important;
       }
     }
   }
   .brew {
-    position: absolute;
-    @include horizontal-center;
-    top: 400px;
+    position: relative;
+    .bucket {
+      svg:first-child {
+        position: relative;
+        top: 17px;
+      }
+      svg:last-child {
+        @include position(absolute, 0 0 0 14px);
+        z-index: -4;
+      }
+      .full {
+        fill: #90CEFF;
+      }
+    }
+    .clock-face {
+      position: absolute;
+      @include horizontal-center;
+      bottom: 40px;
+      z-index: 1;
+    }
+    .tap {
+      svg:first-child {
+        position: absolute;
+        left: 75px;
+        bottom: 40px;
+      }
+      svg:last-child {
+        position: absolute;
+        @include horizontal-center;
+        bottom: 15px;
+        z-index: 2;
+      }
+    }
+  }
+  .fill {
+    position: relative;
+    top: -15px;
+    height: 150px;
+    width: 100%;
+    overflow: visible;
+    #bottle {
+      position: absolute;
+      @include horizontal-center;
+      bottom: 0;
+      z-index: 3;
+    }
+    #mate {
+      display: none;
+      position: absolute;
+      @include horizontal-center;
+      top: -120px;
+      z-index: 1;
+    }
+    &:before {
+      content: '';
+      @include position(absolute, 0 0 -20px 0);
+      background: white;
+      z-index: -1;
+    }
   }
 }
 

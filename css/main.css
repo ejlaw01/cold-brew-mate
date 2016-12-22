@@ -52,10 +52,17 @@ table {
   border-spacing: 0; }
 
 h2 {
+  width: 100%;
   text-align: center;
   font-size: 2em;
   font-weight: lighter;
   color: inverse(#F7F4EF); }
+  @media screen and (max-width: 750px) {
+    h2 {
+      font-size: 1.7em; } }
+  @media screen and (max-width: 425px) {
+    h2 {
+      font-size: 1.4em; } }
 
 h3 {
   font-size: 1.3em;
@@ -99,23 +106,52 @@ body {
     margin: 0 auto;
     text-align: center; }
 
+.navbar-fixed {
+  position: fixed !important;
+  top: 0 !important; }
+
 .nav {
   height: 10vh;
-  position: relative; }
+  width: 100%;
+  position: absolute;
+  top: 90vh;
+  z-index: 3; }
   .nav ul {
-    position: relative;
-    display: -webkit-box;
-    display: -moz-box;
-    display: box;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 100%; }
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 100%; }
     .nav ul li {
+      float: left;
+      width: 12%;
+      height: 100%;
+      margin: 0 auto;
+      margin-left: 4%;
+      text-align: center;
       color: inverse(#F7F4EF); }
+      @media screen and (max-width: 550px) {
+        .nav ul li {
+          display: none; } }
+  .nav .mobile-nav {
+    display: none;
+    position: relative;
+    width: 100%; }
+    @media screen and (max-width: 550px) {
+      .nav .mobile-nav {
+        display: inline-block; } }
+    .nav .mobile-nav h3 {
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      margin: 10px;
+      color: grey; }
+    .nav .mobile-nav img {
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      right: 0;
+      height: 40px;
+      margin: 10px; }
   .nav:before {
     content: '';
     position: absolute;
@@ -124,7 +160,7 @@ body {
     bottom: 0;
     left: 0;
     background: #F7F4EF;
-    opacity: .6; }
+    opacity: .9; }
 
 .section-wrapper {
   width: 100%; }
@@ -136,51 +172,60 @@ body {
   max-width: 1000px;
   margin: 0 auto;
   padding: 1em;
-  background-color: inherit; }
+  background-color: inherit;
+  z-index: 0; }
+  @media screen and (min-width: 750px) {
+    .section {
+      padding: 2em; } }
   .section .section-text {
     margin: 1em;
     text-align: center; }
 
-#our-mates .flavors {
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: distribute;
-  -moz-box-pack: distribute;
-  box-pack: distribute;
-  -webkit-justify-content: space-around;
-  -moz-justify-content: space-around;
-  -ms-justify-content: space-around;
-  -o-justify-content: space-around;
-  justify-content: space-around;
-  -ms-flex-pack: distribute;
-  -webkit-box-align: center;
-  -moz-box-align: center;
-  box-align: center;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  -o-align-items: center;
-  align-items: center;
-  -ms-flex-align: center; }
-  @media screen and (max-width: 550px) {
-    #our-mates .flavors {
-      flex-direction: column; } }
-  #our-mates .flavors .product-flavor {
-    margin: 1em; }
-    #our-mates .flavors .product-flavor img {
-      width: 150px; }
+#our-mates {
+  position: relative;
+  top: 10vh;
+  background: white;
+  margin-bottom: 10vh; }
+  #our-mates .flavors {
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: distribute;
+    -moz-box-pack: distribute;
+    box-pack: distribute;
+    -webkit-justify-content: space-around;
+    -moz-justify-content: space-around;
+    -ms-justify-content: space-around;
+    -o-justify-content: space-around;
+    justify-content: space-around;
+    -ms-flex-pack: distribute;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    box-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -ms-flex-align: center; }
+    @media screen and (max-width: 550px) {
+      #our-mates .flavors {
+        flex-direction: column; } }
+    #our-mates .flavors .product-flavor {
+      margin: 1em; }
+      #our-mates .flavors .product-flavor img {
+        width: 150px; }
 
 #why-mate {
   background-color: #cc621c;
   position: relative;
   color: #F7F4EF;
   z-index: 1; }
-  #why-mate .section {
+  #why-mate .reason-wrapper {
     display: -webkit-box;
     display: -moz-box;
     display: box;
@@ -207,7 +252,7 @@ body {
     align-items: baseline;
     -ms-flex-align: baseline; }
     @media screen and (max-width: 650px) {
-      #why-mate .section {
+      #why-mate .reason-wrapper {
         -webkit-box-orient: vertical;
         -moz-box-orient: vertical;
         box-orient: vertical;
@@ -218,14 +263,15 @@ body {
         -moz-flex-direction: column;
         flex-direction: column;
         -ms-flex-direction: column; } }
-    #why-mate .section .reason {
+    #why-mate .reason-wrapper .reason {
       position: relative;
       min-width: 25%;
-      margin: 1em; }
-      #why-mate .section .reason h3 {
+      margin: 2em 1em;
+      padding-bottom: 1em; }
+      #why-mate .reason-wrapper .reason h3 {
         margin-top: 65px;
         text-align: center; }
-      #why-mate .section .reason img {
+      #why-mate .reason-wrapper .reason img {
         position: absolute;
         left: 50%;
         transform: translate(-50%, 0);
@@ -233,21 +279,20 @@ body {
 
 #process {
   position: relative;
-  height: 1000px;
+  height: auto;
   width: 218px;
   margin: 0 auto;
   padding: 0;
-  background: whitesmoke; }
+  background: white;
+  z-index: -2; }
   #process h2 {
     position: relative;
+    padding-top: 1.5em;
+    background: white;
     z-index: 2; }
   #process .ingredients {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: auto;
-    left: 0;
-    min-height: 150px;
+    position: relative;
+    min-height: 100px;
     width: 100%;
     background: white;
     z-index: 1; }
@@ -255,23 +300,82 @@ body {
       position: absolute;
       right: 0;
       bottom: 0; }
-  #process .pour {
-    position: fixed;
-    top: 110px;
-    left: 50%;
-    transform: translate(-50%, 0);
+  #process .pour-wrapper {
+    position: relative;
+    height: 250px;
+    width: 100%;
     overflow: hidden; }
-    #process .pour .flow#water {
-      float: right; }
-    #process .pour .flow.spacer {
-      width: 100px; }
-    #process .pour .flow#yerba {
-      float: left; }
+    #process .pour-wrapper .pour {
+      position: fixed;
+      top: 240px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      overflow: hidden;
+      z-index: -3; }
+      #process .pour-wrapper .pour #water {
+        display: none;
+        float: right;
+        margin-left: 83px; }
+      #process .pour-wrapper .pour .flow {
+        display: block !important; }
   #process .brew {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
-    top: 400px; }
+    position: relative; }
+    #process .brew .bucket svg:first-child {
+      position: relative;
+      top: 17px; }
+    #process .brew .bucket svg:last-child {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 14px;
+      z-index: -4; }
+    #process .brew .bucket .full {
+      fill: #90CEFF; }
+    #process .brew .clock-face {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 0);
+      bottom: 40px;
+      z-index: 1; }
+    #process .brew .tap svg:first-child {
+      position: absolute;
+      left: 75px;
+      bottom: 40px; }
+    #process .brew .tap svg:last-child {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 0);
+      bottom: 15px;
+      z-index: 2; }
+  #process .fill {
+    position: relative;
+    top: -15px;
+    height: 150px;
+    width: 100%;
+    overflow: visible; }
+    #process .fill #bottle {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 0);
+      bottom: 0;
+      z-index: 3; }
+    #process .fill #mate {
+      display: none;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 0);
+      top: -120px;
+      z-index: 1; }
+    #process .fill:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: -20px;
+      left: 0;
+      background: white;
+      z-index: -1; }
 
 #impact {
   background-color: #D6E681; }

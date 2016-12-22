@@ -1,20 +1,56 @@
+.navbar-fixed {
+  position: fixed !important;
+  top: 0 !important;
+}
+
 .nav {
   height: 10vh;
-  position: relative;
+  width: 100%;
+  position: absolute;
+  top: 90vh;
+  z-index: 3;
   ul {
-    position: relative;
-    @include display(flex);
-    justify-content: space-around;
-    align-items: center;
-    height: 100%;
+    position: absolute;
+    @include vertical-center;
+    width: 100%;
     li {
+      float: left;
+      width: 12%;
+      height: 100%;
+      margin: 0 auto;
+      margin-left: 4%;
+      text-align: center;
       color: $text-dark;
+      @media screen and (max-width: 550px) {
+        display: none;
+      }
+    }
+  }
+  .mobile-nav {
+    display: none;
+    position: relative;
+    width: 100%;
+    @media screen and (max-width: 550px) {
+      display: inline-block;
+    }
+    h3 {
+      position: absolute;
+      @include vertical-center;
+      margin: 10px;
+      color: grey;
+    }
+    img {
+      position: absolute;
+      @include vertical-center;
+      right: 0;
+      height: 40px;
+      margin: 10px;
     }
   }
   &:before {
     content: '';
     @include position(absolute,  0 0 0 0);
     background: $off-white;
-    opacity: .6;
+    opacity: .9;
   }
 }
