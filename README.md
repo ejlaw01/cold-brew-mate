@@ -10,7 +10,7 @@
 * _Run on a web browser by navigating to the directory and running `open index.html`_
 * _View_
 
-_or just click the link: ejlaw01.github.io/cold-brew-mate
+_or just click the link: (http://ejlaw01.github.io/cold-brew-mate)[ejlaw01.github.io/cold-brew-mate]_
 
 ### Technologies used
 
