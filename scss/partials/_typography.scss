@@ -6,8 +6,9 @@ h2 {
   width: 100%;
   text-align: center;
   font-size: 2em;
-  font-weight: lighter;
-  color: $text-dark;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: .01em;
   @media screen and (max-width: 750px) {
     font-size: 1.7em;
   }
@@ -20,4 +21,9 @@ h3 {
   font-size: 1.3em;
   font-weight: bolder;
   margin: 10px auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
