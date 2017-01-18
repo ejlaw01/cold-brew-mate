@@ -56,7 +56,7 @@ h2 {
   text-align: center;
   font-size: 2em;
   text-align: center;
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: .01em; }
   @media screen and (max-width: 750px) {
     h2 {
@@ -76,7 +76,7 @@ a {
 
 body {
   box-sizing: border-box;
-  color: inverse(#F7F4EF);
+  color: inverse(#F9F9f9);
   font-size: 1em;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
@@ -109,8 +109,9 @@ body {
     height: 12%;
     width: 100%;
     margin: 0 auto;
+    font-weight: 300;
     text-shadow: 0px 0px 90px #a9c126;
-    color: white; }
+    color: black; }
 
 .navbar-fixed {
   position: fixed !important;
@@ -134,14 +135,17 @@ body {
       margin: 0 auto;
       margin-left: 4%;
       text-align: center;
-      color: inverse(#F7F4EF); }
+      color: inverse(#F9F9f9); }
       @media screen and (max-width: 550px) {
         .nav ul li {
           display: none; } }
   .nav .mobile-nav {
     display: none;
-    position: relative;
-    width: 100%; }
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
     @media screen and (max-width: 550px) {
       .nav .mobile-nav {
         display: inline-block; } }
@@ -149,7 +153,7 @@ body {
       position: absolute;
       top: 50%;
       transform: translate(0, -50%);
-      margin: 10px;
+      margin: 0px;
       color: grey; }
     .nav .mobile-nav img {
       position: absolute;
@@ -157,7 +161,7 @@ body {
       transform: translate(0, -50%);
       right: 0;
       height: 40px;
-      margin: 10px; }
+      margin-right: 10px; }
   .nav:before {
     content: '';
     position: absolute;
@@ -221,15 +225,18 @@ body {
     @media screen and (max-width: 550px) {
       #our-mates .flavors {
         flex-direction: column; } }
+    #our-mates .flavors:hover img:not(:hover) {
+      filter: grayscale(0.65); }
     #our-mates .flavors .product-flavor {
       margin: 1em; }
       #our-mates .flavors .product-flavor img {
-        width: 150px; }
+        width: 150px;
+        transition: filter 1s ease; }
 
 #why-mate {
   background-color: #cc621c;
   position: relative;
-  color: #F7F4EF;
+  color: #F9F9f9;
   z-index: 1; }
   #why-mate .reason-wrapper {
     display: -webkit-box;

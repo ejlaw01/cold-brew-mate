@@ -36,10 +36,14 @@
     @media screen and (max-width: 550px) {
       flex-direction: column;
     }
+    &:hover img:not(:hover) {
+      filter: grayscale(.65);
+    }
     .product-flavor {
       margin: 1em;
       img {
         width: 150px;
+        transition: filter 1s ease;
       }
     }
   }
