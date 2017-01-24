@@ -9,7 +9,7 @@
 .section {
   position: relative;
   height: auto;
-  min-height: 70vh;
+  min-height: 90vh;
   max-width: 1000px;
   margin: 0 auto;
   padding: 1em;
@@ -43,7 +43,7 @@
       margin: 1em;
       img {
         width: 150px;
-        transition: filter 1s ease;
+        transition: filter .6s ease;
       }
     }
   }
@@ -189,6 +189,20 @@
   }
 }
 
-#impact {
+#contact {
   background-color: $primary;
+  .contact-info {
+    @include display(flex);
+    @include justify-content(space-between);
+    @include align-items(top);
+    margin-top: 4%;
+    height: 65vh;
+    img {
+      height: 100%;
+      border: 5px solid white;
+    }
+    #hours {
+      margin-top: 20px;
+    }
+  }
 }

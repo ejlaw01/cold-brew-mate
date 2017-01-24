@@ -70,6 +70,11 @@ h3 {
   font-weight: bolder;
   margin: 10px auto; }
 
+h4 {
+  font-weight: 600;
+  text-align: left;
+  margin: 3px 0; }
+
 a {
   text-decoration: none;
   color: inherit; }
@@ -130,7 +135,7 @@ body {
     width: 100%; }
     .nav ul li {
       float: left;
-      width: 12%;
+      width: 15%;
       height: 100%;
       margin: 0 auto;
       margin-left: 4%;
@@ -178,7 +183,7 @@ body {
 .section {
   position: relative;
   height: auto;
-  min-height: 70vh;
+  min-height: 90vh;
   max-width: 1000px;
   margin: 0 auto;
   padding: 1em;
@@ -231,7 +236,7 @@ body {
       margin: 1em; }
       #our-mates .flavors .product-flavor img {
         width: 150px;
-        transition: filter 1s ease; }
+        transition: filter .6s ease; }
 
 #why-mate {
   background-color: #cc621c;
@@ -390,7 +395,40 @@ body {
       background: white;
       z-index: -1; }
 
-#impact {
+#contact {
   background-color: #D6E681; }
+  #contact .contact-info {
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between;
+    -ms-flex-pack: justify;
+    -webkit-box-align: top;
+    -moz-box-align: top;
+    box-align: top;
+    -webkit-align-items: top;
+    -moz-align-items: top;
+    -ms-align-items: top;
+    -o-align-items: top;
+    align-items: top;
+    -ms-flex-align: top;
+    margin-top: 4%;
+    height: 65vh; }
+    #contact .contact-info img {
+      height: 100%;
+      border: 5px solid white; }
+    #contact .contact-info #hours {
+      margin-top: 20px; }
 
 /*# sourceMappingURL=main.css.map */
