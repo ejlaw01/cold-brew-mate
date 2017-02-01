@@ -430,7 +430,11 @@ body {
       z-index: -1; }
 
 #contact {
-  background-color: #D6E681; }
+  background-color: #D6E681;
+  min-height: 90vh; }
+  @media screen and (max-width: 850px) {
+    #contact {
+      min-height: 120vh; } }
   #contact .contact-info {
     display: -webkit-box;
     display: -moz-box;
@@ -457,8 +461,9 @@ body {
     -o-align-items: top;
     align-items: top;
     -ms-flex-align: top;
-    height: 65vh; }
-    @media screen and (max-width: 600px) {
+    height: 65vh;
+    margin-top: 20px; }
+    @media screen and (max-width: 850px) {
       #contact .contact-info {
         -webkit-box-orient: vertical;
         -moz-box-orient: vertical;

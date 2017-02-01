@@ -194,12 +194,17 @@
 
 #contact {
   background-color: $primary;
+  min-height: 90vh;
+  @media screen and (max-width: 850px) {
+    min-height: 120vh;
+  }
   .contact-info {
     @include display(flex);
     @include justify-content(space-between);
     @include align-items(top);
     height: 65vh;
-    @media screen and (max-width: 600px) {
+    margin-top: 20px;
+    @media screen and (max-width: 850px) {
       @include flex-direction(column);
     }
     .text-box {
