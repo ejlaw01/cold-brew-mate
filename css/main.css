@@ -122,18 +122,44 @@ body {
   position: fixed !important;
   top: 0 !important; }
 
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 10vh;
+  right: 0;
+  height: 250px;
+  width: 200px;
+  opacity: .8;
+  background-color: #F7F4EF;
+  transition: display 3s ease; }
+  .mobile-menu li {
+    position: relative;
+    padding: 10px;
+    height: 50px;
+    width: 100%;
+    text-align: center; }
+    .mobile-menu li:hover {
+      background-color: #e9e1d4; }
+    .mobile-menu li a {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      padding: 12px; }
+
 .nav {
   height: 10vh;
   width: 100%;
   position: absolute;
   top: 90vh;
   z-index: 3; }
-  .nav ul {
+  .nav .main-nav {
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
     width: 100%; }
-    .nav ul li {
+    .nav .main-nav li {
       float: left;
       width: 15%;
       height: 100%;
@@ -142,7 +168,7 @@ body {
       text-align: center;
       color: inverse(#F9F9f9); }
       @media screen and (max-width: 550px) {
-        .nav ul li {
+        .nav .main-nav li {
           display: none; } }
   .nav .mobile-nav {
     display: none;
@@ -177,6 +203,9 @@ body {
     background: #F7F4EF;
     opacity: .9; }
 
+@media screen and (max-width: 550px) {
+  #menu-burger {
+    display: block; } }
 .section-wrapper {
   width: 100%; }
 
@@ -184,7 +213,7 @@ body {
   position: relative;
   height: auto;
   min-height: 90vh;
-  max-width: 1000px;
+  max-width: 1500px;
   margin: 0 auto;
   padding: 1em;
   background-color: inherit;
@@ -202,6 +231,7 @@ body {
   background: white;
   margin-bottom: 10vh; }
   #our-mates .flavors {
+    margin-top: 10%;
     display: -webkit-box;
     display: -moz-box;
     display: box;
@@ -231,11 +261,12 @@ body {
       #our-mates .flavors {
         flex-direction: column; } }
     #our-mates .flavors:hover img:not(:hover) {
-      filter: grayscale(0.65); }
+      filter: grayscale(0.6); }
     #our-mates .flavors .product-flavor {
-      margin: 1em; }
+      margin: 1em;
+      width: 150px; }
       #our-mates .flavors .product-flavor img {
-        width: 150px;
+        width: 100%;
         transition: filter .6s ease; }
 
 #why-mate {
@@ -269,7 +300,7 @@ body {
     -o-align-items: baseline;
     align-items: baseline;
     -ms-flex-align: baseline; }
-    @media screen and (max-width: 650px) {
+    @media screen and (max-width: 900px) {
       #why-mate .reason-wrapper {
         -webkit-box-orient: vertical;
         -moz-box-orient: vertical;
@@ -284,7 +315,7 @@ body {
     #why-mate .reason-wrapper .reason {
       position: relative;
       min-width: 25%;
-      margin: 2em 1em;
+      margin: 2em;
       padding-bottom: 1em; }
       #why-mate .reason-wrapper .reason h3 {
         margin-top: 65px;
@@ -349,7 +380,10 @@ body {
       left: 14px;
       z-index: -4; }
     #process .brew .bucket .full {
-      fill: #90CEFF; }
+      fill: #90CEFF;
+      -webkit-transition: 1s;
+      -moz-transition: 1s;
+      transition: 1s; }
     #process .brew .clock-face {
       position: absolute;
       left: 50%;
@@ -423,12 +457,29 @@ body {
     -o-align-items: top;
     align-items: top;
     -ms-flex-align: top;
-    margin-top: 4%;
     height: 65vh; }
-    #contact .contact-info img {
-      height: 100%;
-      border: 5px solid white; }
-    #contact .contact-info #hours {
+    @media screen and (max-width: 600px) {
+      #contact .contact-info {
+        -webkit-box-orient: vertical;
+        -moz-box-orient: vertical;
+        box-orient: vertical;
+        -webkit-box-direction: normal;
+        -moz-box-direction: normal;
+        box-direction: normal;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-direction: column; } }
+    #contact .contact-info .text-box {
+      margin-right: 2em;
+      margin-left: 1em;
+      margin-bottom: 2em; }
+    #contact .contact-info #map {
+      margin-right: 1em;
+      flex-grow: 1;
+      min-height: 300px;
+      border: solid white 3px; }
+    #contact .contact-info .bump {
       margin-top: 20px; }
 
 /*# sourceMappingURL=main.css.map */

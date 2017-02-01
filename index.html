@@ -16,16 +16,24 @@
       </div>
     </div>
     <div class="nav">
-      <ul>
-        <li><a href=".hero" id="go-home">Home</a></li>
-        <li><a href="#our-mates" id="go-flavors">Flavors</a></li>
-        <li><a href="#why-mate" id="go-why">Why</a></li>
-        <li><a href="#process" id="go-process">Process</a></li>
-        <li><a href="#contact" id="go-contact">Contact</a></li>
+      <ul class="main-nav">
+        <li><a href=".hero">Home</a></li>
+        <li><a href="#our-mates">Flavors</a></li>
+        <li><a href="#why-mate">Why</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
       <div class="mobile-nav">
-        <h3>Ethan's Yerba Mate</h3>
-        <img src="img/menu-burger.png" alt="toggle menu">
+        <img id="menu-burger" src="img/menu-burger.png" alt="toggle menu">
+        <div class="mobile-menu">
+          <ul>
+            <li><a href=".hero" id="go-home">Home</a></li>
+            <li><a href="#our-mates" id="go-flavors">Flavors</a></li>
+            <li><a href="#why-mate" id="go-why">Why</a></li>
+            <li><a href="#process" id="go-process">Process</a></li>
+            <li><a href="#contact" id="go-contact">Contact</a></li>
+          </ul>
+        </div>
       </div>
     </div>
     <div class="main">
@@ -36,13 +44,13 @@
           </div>
           <div class="flavors">
             <div class="product-flavor" id="original">
-              <img src="img/mate-basic.png" alt="original flavor">
+              <img src="img/brew-original.png" alt="original flavor">
             </div>
             <div class="product-flavor" id="lemon">
-              <img src="img/mate-basic.png" alt="lemon flavor">
+              <img src="img/brew-lemon.png" alt="lemon flavor">
             </div>
             <div class="product-flavor" id="mint">
-              <img src="img/mate-basic.png" alt="mint flavor">
+              <img src="img/brew-mint.png" alt="mint flavor">
             </div>
           </div>
         </div>
@@ -72,6 +80,9 @@
       <div class="section-wrapper">
         <div class="section" id="process">
           <h2>Our Process</h2>
+          <div class="growing">
+
+          </div>
           <div class="ingredients">
             <div class="faucet">
               <svg width="76px" height="46px" viewBox="682 446 76 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -115,7 +126,7 @@
                   </g>
               </svg>
               <svg width="185px" height="244px" viewBox="538 591 185 244" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                  <path d="M538,591 L722,594 L722,813 C722,813 722,834 630,834 C538,834 538,813 538,813 L538,591 Z" id="Rectangle-3" stroke="none" fill="#181818" fill-rule="evenodd" transform="translate(630.000000, 712.500000) scale(1, -1) translate(-630.000000, -712.500000) "></path>
+                  <path id="bucket-back" d="M538,591 L722,594 L722,813 C722,813 722,834 630,834 C538,834 538,813 538,813 L538,591 Z" id="Rectangle-3" stroke="none" fill="#181818" fill-rule="evenodd" transform="translate(630.000000, 712.500000) scale(1, -1) translate(-630.000000, -712.500000) "></path>
               </svg>
             </div>
             <div class="tap">
@@ -147,19 +158,22 @@
           <h2>Contact</h2>
           <div class="contact-info">
             <div class="text-box">
-              <h4 class="emphasis">ETHAN'S COLD-BREWED YERBA MATE</h4>
+              <h4>ETHAN'S COLD-BREWED YERBA MATE</h4>
               <h5>215 SE Taylor St</h5>
               <h5>Portland, OR 97214</h5>
-              <h4 id="hours">Hours</h4>
+              <h5>724-678-9231</h5>
+              <h4 class="bump">Hours</h4>
               <h5>Mon - Fri &emsp; 3 - 10 pm</h5>
               <h5>Sat &emsp;&emsp;&emsp;&ensp; 12 - 10 pm</h5>
               <h5>Sun &emsp;&emsp;&emsp;&nbsp; 12 - 8 pm</h5>
+              <h5 class="bump"><em>Questions? message us at ethan@coldbrewmate.com</em></h5>
             </div>
-            <img id="portland" src="img/mate-map.png" alt="Southeast Portland">
+            <div id="map">
+            </div>
           </div>
         </div>
       </div>
-
     </div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCU0aoj09bbBnpim7JkfW_ZiS6SkKvA30c&callback=initMap" async defer></script>
   </body>
 </html>

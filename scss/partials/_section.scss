@@ -10,7 +10,7 @@
   position: relative;
   height: auto;
   min-height: 90vh;
-  max-width: 1000px;
+  max-width: 1500px;
   margin: 0 auto;
   padding: 1em;
   background-color: inherit;
@@ -30,6 +30,7 @@
   background: white;
   margin-bottom: 10vh;
   .flavors {
+    margin-top: 10%;
     @include display(flex);
     @include justify-content(space-around);
     @include align-items(center);
@@ -37,12 +38,13 @@
       flex-direction: column;
     }
     &:hover img:not(:hover) {
-      filter: grayscale(.65);
+      filter: grayscale(.6);
     }
     .product-flavor {
       margin: 1em;
+      width: 150px;
       img {
-        width: 150px;
+        width: 100%;
         transition: filter .6s ease;
       }
     }
@@ -58,13 +60,13 @@
     @include display(flex);
     @include justify-content(space-between);
     @include align-items(baseline);
-    @media screen and (max-width: 650px) {
+    @media screen and (max-width: 900px) {
       @include flex-direction(column);
     }
     .reason {
       position: relative;
       min-width: 25%;
-      margin: 2em 1em;
+      margin: 2em;
       padding-bottom: 1em;
       h3 {
         margin-top: 65px;
@@ -139,6 +141,7 @@
       }
       .full {
         fill: #90CEFF;
+        @include transition(1s);
       }
     }
     .clock-face {
@@ -195,13 +198,22 @@
     @include display(flex);
     @include justify-content(space-between);
     @include align-items(top);
-    margin-top: 4%;
     height: 65vh;
-    img {
-      height: 100%;
-      border: 5px solid white;
+    @media screen and (max-width: 600px) {
+      @include flex-direction(column);
     }
-    #hours {
+    .text-box {
+      margin-right: 2em;
+      margin-left: 1em;
+      margin-bottom: 2em;
+    }
+    #map {
+      margin-right: 1em;
+      flex-grow: 1;
+      min-height: 300px;
+      border: solid white 3px;
+    }
+    .bump {
       margin-top: 20px;
     }
   }

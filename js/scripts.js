@@ -1,20 +1,47 @@
+function initMap() {
+  var portland = {lat: 45.52, lng: -122.66};
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 14,
+    center: portland
+  });
+  var marker = new google.maps.Marker({
+    position: portland,
+    map: map
+  });
+}
+
 $(document).ready(function() {
 
   var viewHeight = parseInt($(window).height());
+  var isOpen = false;
+
+  $('#menu-burger').click(function(){
+    if ( isOpen === false ) {
+      $('.mobile-menu').slideDown(200);
+      isOpen = true;
+    } else {
+      $('.mobile-menu').slideUp(200);
+      isOpen = false;
+    }
+  });
+
 
   $(window).scroll(function () {
     console.log($(window).scrollTop())
     if ($(window).scrollTop() > (viewHeight * .9)) {
       $('.nav').addClass('navbar-fixed');
-    }
-    if ($(window).scrollTop() < (viewHeight * .9)) {
+    } else {
       $('.nav').removeClass('navbar-fixed');
     }
-    if ($(window).scrollTop() > 1365) {
+
+    if ($(window).scrollTop() > ($(document).height() - viewHeight*4)) {
       $('#water').addClass('flow');
-    }
-    if (($(window).scrollTop() < 1365) || ($(window).scrollTop() > 2430)) {
+    } else {
       $('#water').removeClass('flow');
+    }
+
+    if (($(window).scrollTop() + viewHeight) >= ($(document).height() - viewHeight*.9)) {
+      $('#bucket-back').addClass('full');
     }
   });
 
@@ -23,6 +50,6 @@ $(document).ready(function() {
     $('html, body').animate({
         scrollTop: $( $.attr(this, 'href') ).offset().top-(viewHeight*.1 - 1)
     }, 400);
-});
+  });
 
 });
