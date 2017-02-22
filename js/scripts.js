@@ -25,6 +25,9 @@ $(document).ready(function() {
     }
   });
 
+  $('.product-flavor').click(function(){
+    $(this).addClass('selected-flavor');
+  });
 
   $(window).scroll(function () {
     console.log($(window).scrollTop())

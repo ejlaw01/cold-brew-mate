@@ -269,6 +269,13 @@ body {
         width: 100%;
         transition: filter .6s ease; }
 
+.selected-flavor {
+  animation: move 2s ease; }
+
+@keyframes move {
+  100% {
+    position: absolute;
+    left: 50px; } }
 #why-mate {
   background-color: #cc621c;
   position: relative;

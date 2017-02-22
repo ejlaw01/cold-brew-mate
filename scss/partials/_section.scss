@@ -51,6 +51,17 @@
   }
 }
 
+.selected-flavor {
+  animation: move 2s ease;
+}
+
+@keyframes move {
+  100% {
+    position: absolute;
+    left: 50px;
+  }
+}
+
 #why-mate {
   background-color: $secondary;
   position: relative;
