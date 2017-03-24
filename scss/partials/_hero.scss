@@ -7,7 +7,7 @@
   &::before {
     content: '';
     @include position(absolute, 0 0 0 0);
-    background-image: linear-gradient(to bottom, transparent (70%), $green-filter);
+    // background-image: linear-gradient(to bottom, transparent (70%), $green-filter);
     opacity: .7;
     z-index: -1;
   }
@@ -22,6 +22,7 @@
       height: 12%;
       width: 100%;
       margin: 0 auto;
+      font-size: 1.7em;
       font-weight: 300;
       text-shadow: 0px 0px 90px darken($green-filter, 20%);
       color: black;
