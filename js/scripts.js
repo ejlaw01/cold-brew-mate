@@ -2,7 +2,8 @@ function initMap() {
   var portland = {lat: 45.52, lng: -122.66};
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 14,
-    center: portland
+    center: portland,
+    scrollwheel: false
   });
   var marker = new google.maps.Marker({
     position: portland,
