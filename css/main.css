@@ -356,118 +356,17 @@ body {
         transform: translate(-50%, 0);
         height: 50px; }
 
-#process {
-  position: relative;
-  height: auto;
-  width: 218px;
-  margin: 0 auto;
-  padding: 0;
-  background: white;
-  z-index: -2; }
-  #process h2 {
-    position: relative;
-    padding-top: 1.5em;
-    background: white;
-    z-index: 2; }
-  #process .ingredients {
-    position: relative;
-    min-height: 100px;
-    width: 100%;
-    background: white;
-    z-index: 1; }
-    #process .ingredients .faucet svg {
-      position: absolute;
-      right: 0;
-      bottom: 0; }
-  #process .pour-wrapper {
-    position: relative;
-    height: 250px;
-    width: 100%;
-    overflow: hidden; }
-    #process .pour-wrapper .pour {
-      position: fixed;
-      top: 240px;
-      left: 50%;
-      -webkit-transform: translate(-50%, 0);
-      -moz-transform: translate(-50%, 0);
-      transform: translate(-50%, 0);
-      overflow: hidden;
-      z-index: -3; }
-      #process .pour-wrapper .pour #water {
-        display: none;
-        float: right;
-        margin-left: 83px; }
-      #process .pour-wrapper .pour .flow {
-        display: block !important; }
-  #process .brew {
-    position: relative; }
-    #process .brew .bucket svg:first-child {
-      position: relative;
-      top: 17px; }
-    #process .brew .bucket svg:last-child {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 14px;
-      z-index: -4; }
-    #process .brew .bucket .full {
-      fill: #90CEFF;
-      -webkit-transition: 1s;
-      -moz-transition: 1s;
-      transition: 1s; }
-    #process .brew .clock-face {
-      position: absolute;
-      left: 50%;
-      -webkit-transform: translate(-50%, 0);
-      -moz-transform: translate(-50%, 0);
-      transform: translate(-50%, 0);
-      bottom: 40px;
-      z-index: 1; }
-    #process .brew .tap svg:first-child {
-      position: absolute;
-      left: 75px;
-      bottom: 40px; }
-    #process .brew .tap svg:last-child {
-      position: absolute;
-      left: 50%;
-      -webkit-transform: translate(-50%, 0);
-      -moz-transform: translate(-50%, 0);
-      transform: translate(-50%, 0);
-      bottom: 15px;
-      z-index: 2; }
-  #process .fill {
-    position: relative;
-    top: -15px;
-    height: 150px;
-    width: 100%;
-    overflow: visible; }
-    #process .fill #bottle {
-      position: absolute;
-      left: 50%;
-      -webkit-transform: translate(-50%, 0);
-      -moz-transform: translate(-50%, 0);
-      transform: translate(-50%, 0);
-      bottom: 0;
-      z-index: 3; }
-    #process .fill #mate {
-      display: none;
-      position: absolute;
-      left: 50%;
-      -webkit-transform: translate(-50%, 0);
-      -moz-transform: translate(-50%, 0);
-      transform: translate(-50%, 0);
-      top: -120px;
-      z-index: 1; }
-    #process .fill:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: -20px;
-      left: 0;
-      background: white;
-      z-index: -1; }
+#process.section {
+  color: black;
+  height: auto; }
+  #process.section .mate-equation {
+    padding-top: 20px;
+    padding-bottom: 40px; }
+  #process.section h4 {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 64pt;
+    text-align: center; }
 
 #contact {
   background-color: #D6E681;

@@ -106,114 +106,130 @@
   }
 }
 
-#process {
-  position: relative;
+// #process {
+//   position: relative;
+//   height: auto;
+//   width: 218px;
+//   margin: 0 auto;
+//   padding: 0;
+//   background: white;
+//   z-index: -2;
+//   h2 {
+//     position: relative;
+//     padding-top: 1.5em;
+//     background: white;
+//     z-index: 2;
+//   }
+//   .ingredients {
+//     position: relative;
+//     min-height: 100px;
+//     width: 100%;
+//     background: white;
+//     z-index: 1;
+//     .faucet svg {
+//       position: absolute;
+//       right: 0;
+//       bottom: 0;
+//     }
+//   }
+//   .pour-wrapper {
+//     position: relative;
+//     height: 250px;
+//     width: 100%;
+//     overflow: hidden;
+//     .pour {
+//       position: fixed;
+//       top: 240px;
+//       @include horizontal-center;
+//       overflow: hidden;
+//       z-index: -3;
+//       #water {
+//         display: none;
+//         float: right;
+//         margin-left: 83px;
+//       }
+//       .flow {
+//         display: block !important;
+//       }
+//     }
+//   }
+//   .brew {
+//     position: relative;
+//     .bucket {
+//       svg:first-child {
+//         position: relative;
+//         top: 17px;
+//       }
+//       svg:last-child {
+//         @include position(absolute, 0 0 0 14px);
+//         z-index: -4;
+//       }
+//       .full {
+//         fill: #90CEFF;
+//         @include transition(1s);
+//       }
+//     }
+//     .clock-face {
+//       position: absolute;
+//       @include horizontal-center;
+//       bottom: 40px;
+//       z-index: 1;
+//     }
+//     .tap {
+//       svg:first-child {
+//         position: absolute;
+//         left: 75px;
+//         bottom: 40px;
+//       }
+//       svg:last-child {
+//         position: absolute;
+//         @include horizontal-center;
+//         bottom: 15px;
+//         z-index: 2;
+//       }
+//     }
+//   }
+//   .fill {
+//     position: relative;
+//     top: -15px;
+//     height: 150px;
+//     width: 100%;
+//     overflow: visible;
+//     #bottle {
+//       position: absolute;
+//       @include horizontal-center;
+//       bottom: 0;
+//       z-index: 3;
+//     }
+//     #mate {
+//       display: none;
+//       position: absolute;
+//       @include horizontal-center;
+//       top: -120px;
+//       z-index: 1;
+//     }
+//     &:before {
+//       content: '';
+//       @include position(absolute, 0 0 -20px 0);
+//       background: white;
+//       z-index: -1;
+//     }
+//   }
+// }
+
+
+#process.section {
+  color: black;
   height: auto;
-  width: 218px;
-  margin: 0 auto;
-  padding: 0;
-  background: white;
-  z-index: -2;
-  h2 {
-    position: relative;
-    padding-top: 1.5em;
-    background: white;
-    z-index: 2;
+  .mate-equation {
+    padding-top: 20px;
+    padding-bottom: 40px;
   }
-  .ingredients {
-    position: relative;
-    min-height: 100px;
-    width: 100%;
-    background: white;
-    z-index: 1;
-    .faucet svg {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-    }
-  }
-  .pour-wrapper {
-    position: relative;
-    height: 250px;
-    width: 100%;
-    overflow: hidden;
-    .pour {
-      position: fixed;
-      top: 240px;
-      @include horizontal-center;
-      overflow: hidden;
-      z-index: -3;
-      #water {
-        display: none;
-        float: right;
-        margin-left: 83px;
-      }
-      .flow {
-        display: block !important;
-      }
-    }
-  }
-  .brew {
-    position: relative;
-    .bucket {
-      svg:first-child {
-        position: relative;
-        top: 17px;
-      }
-      svg:last-child {
-        @include position(absolute, 0 0 0 14px);
-        z-index: -4;
-      }
-      .full {
-        fill: #90CEFF;
-        @include transition(1s);
-      }
-    }
-    .clock-face {
-      position: absolute;
-      @include horizontal-center;
-      bottom: 40px;
-      z-index: 1;
-    }
-    .tap {
-      svg:first-child {
-        position: absolute;
-        left: 75px;
-        bottom: 40px;
-      }
-      svg:last-child {
-        position: absolute;
-        @include horizontal-center;
-        bottom: 15px;
-        z-index: 2;
-      }
-    }
-  }
-  .fill {
-    position: relative;
-    top: -15px;
-    height: 150px;
-    width: 100%;
-    overflow: visible;
-    #bottle {
-      position: absolute;
-      @include horizontal-center;
-      bottom: 0;
-      z-index: 3;
-    }
-    #mate {
-      display: none;
-      position: absolute;
-      @include horizontal-center;
-      top: -120px;
-      z-index: 1;
-    }
-    &:before {
-      content: '';
-      @include position(absolute, 0 0 -20px 0);
-      background: white;
-      z-index: -1;
-    }
+  h4 {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 64pt;
+    text-align: center;
   }
 }
 
