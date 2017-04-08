@@ -67,6 +67,20 @@
   position: relative;
   color: $text-light;
   z-index: 1;
+  .why-content {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    @media screen and (max-width: 900px) {
+      position: relative;
+      top: 0;
+      -webkit-transform: translate(0, 0);
+      -moz-transform: translate(0, 0);
+      transform: translate(0, 0);
+    }
+  }
   .reason-wrapper {
     @include display(flex);
     @include justify-content(space-between);
